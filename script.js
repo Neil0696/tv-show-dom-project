@@ -1,4 +1,5 @@
-//You can edit ALL of the code here
+
+//creating a global variable
 const allEpisodes = getAllEpisodes();
 
 function setup() {
@@ -9,24 +10,21 @@ window.onload = setup;
 
 function makePageForEpisodes(episodeList) {
     const rootElem = document.getElementById("root");
-    // rootElem.id = "rootEl";
-    // console.log(rootElem);
     rootElem.textContent = "";
-    
-    // rootElem.textContent = `Got ${episodeList.length} episode(s)`;
-   
+ 
     episodeList.forEach(e => {
     const divEl = document.createElement('div'); 
-    divEl.id = "div";
+    divEl.className = "divEl";
     const titleEl = document.createElement('h2');
-    titleEl.id = "title";
+    titleEl.id = "titleEl";
     const paraEl = document.createElement('p');
-    paraEl.id = "summary";
+    paraEl.id = "summaryEl";
     const imgEl = document.createElement('img');
-    imgEl.id = "image";
+    imgEl.id = "imageEl";
     const aTag = document.createElement("a");
-    // const linkEl = document.createTextNode("Original data from TVMaze.com"); //creates text
-
+    aTag.id = "aTag";
+    // const linkEl = document.createTextNode("Original data from TVMaze.com"); //adds text inside the element
+  
     rootElem.appendChild(divEl);
     divEl.appendChild(titleEl);
     divEl.appendChild(imgEl);
