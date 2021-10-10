@@ -45,8 +45,6 @@ function makePageForEpisodes(episodeList) {
 
 const searchBtnEl = document.getElementById('search-btn');
 const numberDisplayEl = document.getElementById('number-display');
-// numberDisplayEl.innerText = `${allEpisodes.length} Episodes`;
-// numberDisplayEl.style.color = 'grey';
 
 
 searchBtnEl.addEventListener('input', (e) => {
@@ -65,3 +63,26 @@ searchBtnEl.addEventListener('input', (e) => {
     makePageForEpisodes(filteredEps);
 
   });
+
+  //Level 300 (Select input)
+
+let selectEl = document.getElementById("all-episodes");
+
+selectEl.addEventListener('change', selectAnEpisode);
+
+  function selectAnEpisode(e){
+  // let optionEl = document.querySelector('option');
+  let selectEpisode = allEpisodes.filter((episode) => {
+    return e.target.value.includes(episode.name);
+  }); 
+  
+  makePageForEpisodes(selectEpisode)
+
+  // if (selectEl.value === "all episodes") {
+  //   makePageForEpisodes(allEpisodes);
+  // } else {
+  //   makePageForEpisodes(selectEpisode);
+  // }
+  //clears displayNumber text when user selects any option
+  numberDisplayEl.innerText = "";
+}

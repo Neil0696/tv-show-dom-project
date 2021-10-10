@@ -2,20 +2,41 @@
 body{
   padding: 0;
   margin: 0;
-  /* display: flex; */
-  font-family: Arial, Helvetica, sans-serif;  
+  font-family: Arial, Helvetica, sans-serif;
+  /* background: linear-gradient(to right, rgb(1, 59, 56), rgb(49, 11, 15)); */
+  background: rgb(5, 0, 0);
 }
-#top-search-display{
+
+
+header{
+  /* background-color: rgb(2, 2, 2); */
+  background: linear-gradient(90deg,rgb(5, 32, 31), rgb(46, 2, 6));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+#select-div{
+  padding: 15px 5px 0px 5px;
+}
+
+#select-div select {
+  padding: 2px 5px;
+  margin-left: 13px;
+  width: 120px;
+  border-radius: 5px;
+}
+
+#top-search-div{
   height: 50px;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  background-color: black;
   padding: 0 5px;
 }
 
 #search-btn{
-  padding: 5px;
+  /* padding: 5px; */
   margin-right: 2px;
   border-radius: 5px;
 }
@@ -27,7 +48,7 @@ body{
 }
 
 #root{
-  background-color: rgb(31, 30, 30);
+  /* background-color: rgb(31, 30, 30); */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -43,7 +64,9 @@ input{
   justify-content: center;
   flex-wrap: wrap;
   color: white;
-  background-color: rgba(128, 0, 0, 0.747);
+  /* background-color: rgba(78, 2, 2, 0.747); */
+  background: linear-gradient(rgb(0, 32, 31), rgb(48, 1, 5));
+  
   width: 300px;
   margin: 10px;
   padding: 5px;
@@ -51,8 +74,8 @@ input{
 }
 
 .divEl:hover {
-  background-color: rgba(194, 16, 16, 0.543);
-  transition: 0.4s;
+  /* background-color: rgb(245, 8, 8); */
+  transition: 0.3s ease-in;
 }
 
 img {
@@ -91,4 +114,23 @@ a{
 
 a:hover {
   color: grey;
+}
+
+@media screen and (max-width : 634px) {
+  #number-display {
+    font-size: 12px;
+  }
+
+  #search-btn{
+    height: 18px;
+    width: 120px;
+  }  
+
+  #select-div {
+    display: flex;
+    /* flex-direction: row; */
+  }
+  #select-div select{
+    height: 25px;
+  }
 }
