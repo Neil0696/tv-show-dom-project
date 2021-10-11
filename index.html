@@ -9,26 +9,27 @@
   </head>
 
   <body>
-
     <header>
       <div id="select-div">
         <label for="all-episodes">Select Episode</label>
         <select name="all-episodes" id="all-episodes">
-          <option value="all episodes">All Episodes</option>
+          <option value="all episodes" id="view=all">All Episodes</option>
         </select>
       </div>
 
       <div id="top-search-div">
         <!-- <label for="Search-btn">Search Episodes</!-->
-        <input type="text" id="search-btn" name="search-btn" placeholder="search episodes">
+        <input
+          type="text"
+          id="search-btn"
+          name="search-btn"
+          placeholder="search episodes"
+        />
         <p id="number-display"></p>
       </div>
     </header>
 
-    <div id="root">
-
-
-    </div>
+    <div id="root"></div>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
